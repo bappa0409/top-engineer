@@ -3,23 +3,33 @@
     
 <!--begin::Head-->
 <head>
-    <!--begin::Meta-->
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <meta name="title" content="@yield('title')">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    @yield('meta')
-    <!--end::Meta-->
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>@yield('title')</title>
 
-    <!-- App favicon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/frontend/img/favicon.png') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    @include('frontend.include.css')
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="{{ asset('assets/frontend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontend/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontend/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontend/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontend/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontend/vendor/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet"/>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/socializer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
+
     @stack('css')
 </head>
 <!--end::Head-->
@@ -85,8 +95,32 @@
     {{-- <!-- Preloader -->
     <div id="preloader"></div> --}}
 
-    @include('frontend.include.js')
+    <!--begin::Jquery-->
+    <script src="{{asset('assets/frontend/vendor/jquery/jquery-3.6.3.min.js')}}"></script>
+    <script src="{{ asset('assets/frontend/vendor/jquery-ui/jquery-ui.js') }}"></script>
+    <!--end::Jquery-->
 
+
+    <!--begin::Sweet Alert-->
+    <script src="{{asset('assets/frontend/vendor/sweetalert2/sweetalert2.js')}}"></script>
+    <!--end::Sweet Alert-->
+
+    <!-- Vendor JS Files -->
+    <script src="{{asset('assets/frontend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/frontend/vendor/aos/aos.js')}}"></script>
+    <script src="{{asset('assets/frontend/vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('assets/frontend/vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{asset('assets/frontend/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{asset('assets/frontend/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+
+    <!-- Main JS File -->
+    <script src="{{asset('assets/frontend/js/app.js')}}?v_{{date("h_i")}}"></script>
+
+
+    <!--begin::Custom-->
+    <script src="{{asset('assets/frontend/js/custom.js')}}?v_{{date("h_i")}}"></script>
+    <!--end::Custom-->
+    
     @stack('scripts')
 </body>
 

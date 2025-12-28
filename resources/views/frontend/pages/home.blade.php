@@ -153,20 +153,19 @@
 </section>
 <!-- end::Icon Boxes Section -->
 
+
 <!-- begin::About Us Section -->
 <section id="about-us" class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 align-items-stretch content position-relative video-box mt-lg-0 mt-sm-0 mt-4 aos-init aos-animate"
-                data-aos="fade-right">
-                <img src="{{ asset('assets/frontend/img/about_us.png') }}" class="img-fluid"
-                    alt="Structures detailing in BIM Tekla Structures">
+            <div class="col-lg-6 mt-4" data-aos="fade-right">
+                <div class="inner-content">
+                    <img src="{{ asset('assets/frontend/img/about_us.png') }}" class="img-fluid" alt="About Us">
+                </div>
             </div>
 
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch aos-init aos-animate"
-                data-aos="fade-left">
-
-                <div class="content">
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="inner-content">
                     <h3><strong>ABOUT US</strong></h3>
                     <p>
                         TopEngineer provides leading engineering services being innovative Structural Steel Detailing,
@@ -198,11 +197,9 @@
                     </span>
 
                 </div>
-
             </div>
 
         </div>
-
     </div>
 </section>
 <!-- end::About Us Section -->
@@ -211,15 +208,8 @@
 <section id="steel-detailing" class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 align-items-stretch content position-relative video-box order-lg-2 mt-lg-0 mt-4 aos-init aos-animate"
-                data-aos="fade-right">
-                <img src="{{ asset('assets/frontend/img/steel_detailing/main.png') }}" class="img-fluid"
-                    alt="Structures detailing in BIM Tekla Structures">
-            </div>
-
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch order-md-1 order-lg-1 aos-init aos-animate"
-                data-aos="fade-left">
-                <div class="content d-lg-none d-xl-block">
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="inner-content d-lg-none d-xl-block">
                     <h3> <strong>STEEL DETAILING</strong></h3>
                     <p> As steel detailers, we generate 2D plans and 3D models to aid the fabrication and erection
                         process of steel framework.
@@ -272,53 +262,11 @@
                         <a href="/steel-detailing/" class="btn-buy">Read More</a>
                     </div>
                 </div>
-
-
-
-                <div class="content d-none d-lg-block d-xl-none">
-                    <h3> <strong>STEEL DETAILING</strong></h3>
-                    <p> As steel detailers, we generate 2D plans and 3D models to aid the fabrication and erection
-                        process of steel framework.
-                        These technologies allow us to maintain strong and focused plans/ models for all projects,
-                        regrdless of scope and complexity.
-                    </p>
-
-                    <li>Steel structures detailing
-
-
-                    </li>
-
-                    <li> Advanced Bill of Materials
-                    </li>
-
-                    <li> A Single part drawings
-
-
-                    </li>
-
-                    <li> Assembly drawings
-
-                    </li>
-
-                    <li> Bolts specification
-                    </li>
-
-                    <li> Erection drawings
-
-
-                    </li>
-
-                    <li> Bill of Materials
-
-
-                    </li>
-
-                    <li> Shipping List
-                    </li>
-                    <br>
-                    <div class="pricing aos-init aos-animate" data-aos="fade-up">
-                        <a href="/steel-detailing/" class="btn-buy">Read More</a>
-                    </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="inner-content">
+                    <img src="{{ asset('assets/frontend/img/steel_detailing/main.png') }}" class="img-fluid"
+                    alt="Steel Detailing">
                 </div>
             </div>
         </div>
@@ -329,18 +277,17 @@
 <!-- begin::Rebar Detailing Section -->
 <section id="rebar-detailing" class="content">
     <div class="container-fluid">
-
         <div class="row">
-            <div class="col-lg-6 align-items-stretch content position-relative video-box mt-lg-0 mt-4 aos-init aos-animate"
-                data-aos="fade-right">
-                <img src="{{ asset('assets/frontend/img/rebar-detaling/main.png') }}" class="img-fluid"
-                    alt="REBAR DETAILING IN TEKLA STRUCTURES">
+
+            <div class="col-lg-6 mt-4" data-aos="fade-right">
+                <div class="inner-content">
+                    <img src="{{ asset('assets/frontend/img/rebar-detaling/main.png') }}" class="img-fluid"
+                        alt="Rebar Detailing">
+                </div>
             </div>
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch aos-init aos-animate"
-                data-aos="fade-left">
 
-
-                <div class="content">
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="inner-content">
                     <h3> <strong>REBAR DETAILING</strong></h3>
                     <p> <strong>Rebar detailing</strong> is a detailed construction engineering process that includes
                         the bending shapes, placement, dimension, quantity, description and laps of the reinforcement.
@@ -390,53 +337,84 @@
                 </div>
             </div>
 
-
-
         </div>
-
     </div>
 </section>
 <!-- end::Rebar Detailing Section -->
 
-<!-- begin::Structural Analysis Section -->
-<section id="calculation" class="content">
+<!-- begin::Bim Modeling Section -->
+<section id="bim-modeling" class="content">
     <div class="container-fluid">
-
         <div class="row">
-            <div class="col-lg-6 align-items-stretch content position-relative video-box mt-lg-0 mt-4 aos-init aos-animate"
-                data-aos="fade-right">
-                <img src="{{ asset('assets/frontend/img/structural-analysis.png') }}" class="img-fluid"
-                    alt="STRUCTURAL ANALYSIS AND DESIGN TEKLA STRUCTURES">
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="inner-content">
+                    <h3> <strong>BIM MODELING</strong></h3>
+                    <p><strong> BIM</strong> is a universal platform for building. It puts together every piece of
+                        information about every component of a building project.
+                        With BIM you are able to access any type of information, integrating everyone working with the
+                        project, making everything more efficient
+                        and cost effective. Companies using BIM save production costs and time as they have a much lower
+                        chance of making mistakes.
+                    </p>
+                    <p>
+                        The data from BIM about any given building can be used to simulate the full life-cycle of a
+                        facility, from the beginning of initial
+                        project production until the demolition phases, counting in the recovery of any recyclable
+                        materials. Subsurface and below-ground spaces and
+                        facilities with their systems can be modeled and shown using a 1-to-1 scale next to each other,
+                        which in turn can be simulated and depicted in
+                        the entire project. Such vast amounts of information can prevent any errors which can show up
+                        during different phases of the project.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch aos-init aos-animate"
-                data-aos="fade-left">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="inner-content">
+                    <img src="{{ asset('assets/frontend/img/bim.png') }}" class="img-fluid" alt="BIM Modeling">
+                </div>
+            </div>
 
+        </div>
+    </div>
+</section>
+<!-- end::Bim Modeling Section -->
 
-                <div class="content">
-                    <h3> <strong>STRUCTURAL ANALYSIS AND DESIGN</strong></h3>
-                    <p> Topengineer LTD is a consulting engineering firm that specializes in innovative, cost effective,
-                        structural designs Our business objective is to provide high quality, specialist structural
-                        engineering services to construction companies and large infrastructure asset owners.
-                    </p>
+<!-- begin::Structural Analysis Section -->
+<section id="structural-analysis" class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 mt-4" data-aos="fade-right">
+                <div class="inner-content">
+                    <img src="{{ asset('assets/frontend/img/structural-analysis.png') }}" class="img-fluid"
+                        alt="STRUCTURAL ANALYSIS AND DESIGN TEKLA STRUCTURES">
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="inner-content">
+                    <h3><strong>STRUCTURAL ANALYSIS AND DESIGN</strong></h3>
+
                     <p>
-                        Our staff is composed of highly qualified professionals and technicians with over 20 years of
-                        experience in the design and construction industry. We offer full services, from initial
-                        planning and concept development to construction documentation, and construction administration.
-                        Our professional services are provided for commercial, residential, hospitality, and
-                        institutional projects.
+                        TopEngineer LTD is a consulting engineering firm specializing in innovative,
+                        cost-effective structural design solutions. Our objective is to deliver
+                        high-quality structural engineering services for complex construction projects.
                     </p>
+
                     <p>
-                        As structural engineers, we focus on providing our clients with responsible and imaginative
-                        solutions to engineering challenges. Our staff is known for its innovative use of software and
-                        materials, as well as for the development of new structural systems and concepts. Our project
-                        sizes range from small renovation and additions to large high rise commercial buildings.
+                        Our team consists of highly qualified professionals with over 20 years of
+                        experience in structural design and construction, offering services from
+                        concept development to construction administration.
+                    </p>
+
+                    <p>
+                        We focus on responsible and imaginative engineering solutions, utilizing
+                        advanced software tools and modern materials to deliver efficient structural
+                        systems for projects ranging from renovations to high-rise buildings.
                     </p>
 
                 </div>
             </div>
 
         </div>
-
     </div>
 </section>
 <!-- end::Structural Analysis Section -->
@@ -444,170 +422,147 @@
 <!-- begin::Connection Design Section -->
 <section id="connection-design" class="content">
     <div class="container-fluid">
-
         <div class="row">
-            <div class="col-lg-6 align-items-stretch content position-relative video-box order-lg-2 mt-lg-0 mt-4 aos-init aos-animate"
-                data-aos="fade-right">
-                <img src="{{ asset('assets/frontend/img/connection-design.png') }}" class="img-fluid"
-                    alt="CONNECTION DESIGN BIM IDEA StatiCa">
-            </div>
+            
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="inner-content">
+                    <h3><strong>CONNECTION DESIGN</strong></h3>
 
-
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch rder-lg-1 aos-init aos-animate"
-                data-aos="fade-left">
-                <div class="content">
-
-                    <h3> <strong>CONNECTION DESIGN</strong></h3>
-                    <p> Usually, the calculation of connection in a steel structure is needed to develop steel
-                        structures detailing design.
-                        Construction calculations are necessary to select the best matches and optimal connection
-                        configurations while using the minimum of material consumption.
-                        A detailed study of the calculation of all the project components can greatly increase the
-                        complexity of the final project and increase the time and cost of design.
-                    </p>
                     <p>
-                        The result of joint calculation is to be presented in the form of a calculation note.
-                        In order to calculate joints in steel structures, the actual loads acting on each element are
-                        needed.
-                        If the actual loads cannot be highlighted in the basic design of steel structures, it can
-                        instead be developed beforehand.
+                        Usually, the calculation of connection in a steel structure is needed to develop steel structures detailing design. Construction calculations are necessary to select the best matches and optimal connection configurations while using the minimum of material consumption. A detailed study of the calculation of all the project components can greatly increase the complexity of the final project and increase the time and cost of design.
                     </p>
+
                     <p>
-                        If connection calculation is necessary, we use IDEA StatiCa, a program based on the method of
-                        finite elements used to calculated connections.
-                        IDEA StatiCa allows us to calculate steel joints such as 2D frames and trusses, footing and
-                        anchoring,
-                        3D frames and trusses and reinforcement connections such as beam details, wall details,
-                        diaphragms, frame joints, hangings and brackets.
-                        The price evaluation for each project is bespoke and there are a few factors influencing the
-                        cost.
+                        The result of joint calculation is to be presented in the form of a calculation note. In order to calculate joints in steel structures, the actual loads acting on each element are needed. If the actual loads cannot be highlighted in the basic design of steel structures, it can instead be developed beforehand.
+                    </p>
+
+                    <p>
+                        If connection calculation is necessary, we use IDEA StatiCa, a program based on the method of finite elements used to calculated connections. IDEA StatiCa allows us to calculate steel joints such as 2D frames and trusses, footing and anchoring, 3D frames and trusses and reinforcement connections such as beam details, wall details, diaphragms, frame joints, hangings and brackets. The price evaluation for each project is bespoke and there are a few factors influencing the cost.
                     </p>
                 </div>
-
-
             </div>
-
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="inner-content">
+                    <img src="{{ asset('assets/frontend/img/connection-design.png') }}" class="img-fluid"
+                        alt="CONNECTION DESIGN BIM IDEA StatiCa">
+                </div>
+            </div>
         </div>
-
     </div>
 </section>
 <!-- end::Connection Design Section -->
 
-<!-- begin::Consulting Section -->
+<!-- begin::Consulting Design Section -->
 <section id="consulting" class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 align-items-stretch content position-relative video-box mt-lg-0 mt-4 aos-init aos-animate"
-                data-aos="fade-right">
-                <img src="{{ asset('assets/frontend/img/consulting.png') }}" class="img-fluid"
-                    alt="CONSULTING Tekla Structures SAP2000 or IdeaStatica">
+            <div class="col-lg-6 mt-4" data-aos="fade-right">
+                <div class="inner-content">
+                    <img src="{{ asset('assets/frontend/img/consulting.png') }}" class="img-fluid"
+                        alt="CONSULTING Tekla Structures SAP2000 IDEA StatiCa">
+                </div>
             </div>
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items- stretch aos-init aos-animate"
-                data-aos="fade-left">
-
+            <div class="col-lg-6" data-aos="fade-left">
                 <div class="accordion-list mt-5">
+                    <h3 class="text-uppercase"><strong>Consulting</strong></h3>
 
-                    <h3 class="text-uppercase"><strong>consulting</strong></h3>
                     <p>
-                        Maximize your potential with Tekla Structures, SAP2000 or IdeaStatica trainings
+                        Maximize your potential with Tekla Structures, SAP2000 or IDEA StatiCa trainings.
                     </p>
                     <p>
-                        Virtual and classroom courses give you the confidence and skills to be more productive with
-                        engineering software.
+                        Virtual and classroom courses that boost productivity and confidence.
                     </p>
 
-
-                    <ul class="mt-4 accordion-list">
-                        <!-- Tekla Structures Course -->
+                    <ul class="accordion-list mt-4">
                         <li data-aos="fade-up" data-aos-delay="100">
-                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1" class="collapse">
-                                <span>01</span> Tekla Structures course
+                            <a data-bs-toggle="collapse" data-bs-target="#consult-1" class="collapse">
+                                <span>01</span> Tekla Structures Course
                                 <i class="fa-solid fa-chevron-down icon-show"></i>
                                 <i class="fa-solid fa-chevron-up icon-close"></i>
                             </a>
 
-                            <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                            <div id="consult-1" class="collapse show" data-bs-parent=".accordion-list">
                                 <p>
-                                    3D model examples, Tekla plugins, and useful materials.
-                                    After completing the course, you can test your skills and receive a certificate.
-                                    Learn Tekla Structures for detailing, design, and construction data management.
+                                    3D model examples, Tekla plugins, certification and practical
+                                    workflows for detailing and construction data management.
                                 </p>
                             </div>
                         </li>
 
-                        <!-- SAP2000 Course -->
+                        <!-- SAP2000 -->
                         <li data-aos="fade-up" data-aos-delay="200">
-                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">
-                                <span>02</span> SAP2000 course
+                            <a data-bs-toggle="collapse" data-bs-target="#consult-2" class="collapsed">
+                                <span>02</span> SAP2000 Course
                                 <i class="fa-solid fa-chevron-down icon-show"></i>
                                 <i class="fa-solid fa-chevron-up icon-close"></i>
                             </a>
 
-                            <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                            <div id="consult-2" class="collapse" data-bs-parent=".accordion-list">
                                 <p>
-                                    Learn buckling analysis, nonlinear shell elements, progressive collapse,
-                                    dampers, and real-world structural engineering applications using SAP2000.
+                                    Buckling analysis, nonlinear elements, progressive collapse
+                                    and real-world structural applications.
                                 </p>
                             </div>
                         </li>
 
-                        <!-- IDEA StatiCa Course -->
+                        <!-- IDEA StatiCa -->
                         <li data-aos="fade-up" data-aos-delay="300">
-                            <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">
-                                <span>03</span> IDEA StatiCa course
+                            <a data-bs-toggle="collapse" data-bs-target="#consult-3" class="collapsed">
+                                <span>03</span> IDEA StatiCa Course
                                 <i class="fa-solid fa-chevron-down icon-show"></i>
                                 <i class="fa-solid fa-chevron-up icon-close"></i>
                             </a>
 
-                            <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                            <div id="consult-3" class="collapse" data-bs-parent=".accordion-list">
                                 <p>
-                                    Professional training for steel connection design and verification.
-                                    Learn welded & bolted joints, compliance with AISC & Eurocode,
-                                    and advanced joint calculations using IDEA StatiCa.
+                                    Professional training for steel connection design following
+                                    AISC & Eurocode with advanced joint verification.
                                 </p>
                             </div>
                         </li>
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- end::Consulting Section -->
-
+<!-- end::Consulting Design Section -->
 
 <!-- begin::Innovative IT Ideas Section -->
-<section id="why-us" class="content">
+<section id="innovative-it" class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 align-items-stretch content position-relative video-box order-lg-2 mt-lg-0 mt-4 aos-init aos-animate"
-                data-aos="fade-right">
-                <img src="{{ asset('assets/frontend/img/innovative-it.png') }}" loading="lazy" class="img-fluid"
-                    alt=" PLUGINS FOR TEKLA STRUCTURES">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="inner-content">
+                    <img src="{{ asset('assets/frontend/img/innovative-it.png') }}" loading="lazy" class="img-fluid"
+                        alt="Plugins for Tekla Structures">
+                </div>
             </div>
 
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch order-lg-1 aos-init aos-animate"
-                data-aos="fade-left">
-                <div class="content">
-                    <h3> <strong>INNOVATIVE IT IDEAS</strong></h3>
-                    <p> <strong> PLUGINS FOR TEKLA STRUCTURES</strong>
-                        Since 2009, Topengineer assist the construction companies in providing solutions for all their
-                        BIM projects.
-                        Our mission is to make available new integrated and adapted BIM resources to answer to all your
-                        issues and
-                        support you in seizing the digital transformation of the sector ‘s processes as an opportunity
-                        and a support for your future innovations.
-                    </p>
-                    <p><strong> Our expertise includes: </strong>
-                        - Our team create user-friendly plugins, applications, drawing tools,
-                        macros, integration tools with Tekla Structures and other BIM software.
-                        - BIM Data interoperability.
-                        - Follow up and maintenance Rebar &amp; Precast concrete
-                        manufacturers, Engineering firms, contractors and all
-                        other involved in the construction industry.
-                    </p>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="inner-content">
+                    <h3><strong>INNOVATIVE IT IDEAS</strong></h3>
+
                     <p>
-                        We are here to attend you at each step of your innovative projects!
+                        <strong>PLUGINS FOR TEKLA STRUCTURES</strong><br>
+                        Since 2009, TopEngineer has been assisting construction companies by
+                        delivering BIM-based digital solutions. Our mission is to develop
+                        integrated and adaptive BIM resources that support digital
+                        transformation and innovation.
+                    </p>
+
+                    <p>
+                        <strong>Our expertise includes:</strong><br>
+                        • User-friendly plugins, applications, drawing tools, macros and
+                        integration tools for Tekla Structures and other BIM software<br>
+                        • BIM data interoperability<br>
+                        • Follow-up and maintenance for rebar & precast concrete manufacturers,
+                        engineering firms and contractors
+                    </p>
+
+                    <p>
+                        We are here to support you at every stage of your innovative projects.
                     </p>
                 </div>
             </div>
@@ -642,10 +597,9 @@
 <!-- end::CTA Section -->
 
 <!-- begin::Project Section -->
-<section id="portfolio" class="content mt-5">
+<section id="project" class="content mt-5">
     <div class="container-fluid">
 
-        <!-- Section Title -->
         <div class="section-title text-center mb-5">
             <h2 class="mb-1 text-uppercase">Our Project</h2>
             <p>Successfully Completed Project</p>
@@ -676,74 +630,65 @@
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
     </div>
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4">
+        <div class="row gy-4">
 
-        <!-- Contact Info -->
-        <div class="col-lg-5">
-            <!-- Address -->
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-map-marker-alt flex-shrink-0"></i>
-                <div>
-                    <h4>Address</h4>
-                    <p>A108 Adam Street, New York, NY 535022</p>
+            <div class="col-lg-5">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-map-marker-alt flex-shrink-0"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>A108 Adam Street, New York, NY 535022</p>
+                    </div>
+                </div>
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-phone-alt flex-shrink-0"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+1 5589 55488 55</p>
+                    </div>
+                </div>
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-envelope flex-shrink-0"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>info@example.com</p>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-7">
+                <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+                    <div class="row gy-4">
 
-            <!-- Phone -->
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-phone-alt flex-shrink-0"></i>
-                <div>
-                    <h4>Call Us</h4>
-                    <p>+1 5589 55488 55</p>
-                </div>
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <textarea class="form-control" name="message" rows="6" placeholder="Message"
+                                required></textarea>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
-            <!-- Email -->
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-envelope flex-shrink-0"></i>
-                <div>
-                    <h4>Email Us</h4>
-                    <p>info@example.com</p>
-                </div>
-            </div>
         </div>
-
-        <!-- Contact Form -->
-        <div class="col-lg-7">
-            <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
-                <div class="row gy-4">
-
-                    <div class="col-md-6">
-                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                    </div>
-
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                    </div>
-
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                    </div>
-
-                    <div class="col-md-12">
-                        <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                    </div>
-
-                    <div class="col-md-12 text-center">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </div>
-
-                </div>
-            </form>
-        </div>
-
     </div>
-</div>
-
 </section>
 <!-- end::Contact Section -->
 @endsection
