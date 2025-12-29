@@ -5906,7 +5906,7 @@ fieldset:disabled .btn {
 
 .modal-header {
     align-items: center;
-    border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+    border-bottom: var(--bs-modal-header-border-width) solid #c9c7c7;
     border-top-left-radius: var(--bs-modal-inner-border-radius);
     border-top-right-radius: var(--bs-modal-inner-border-radius);
     display: flex;
@@ -5936,7 +5936,7 @@ fieldset:disabled .btn {
     background-color: var(--bs-modal-footer-bg);
     border-bottom-left-radius: var(--bs-modal-inner-border-radius);
     border-bottom-right-radius: var(--bs-modal-inner-border-radius);
-    border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+    border-top: var(--bs-modal-footer-border-width) solid #c9c7c7;
     display: flex;
     flex-shrink: 0;
     flex-wrap: wrap;

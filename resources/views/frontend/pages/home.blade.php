@@ -571,31 +571,6 @@
 </section>
 <!-- end::Innovative IT Ideas Section -->
 
-<!-- begin::CTA Section -->
-<section id="cta" class="cta">
-    <div class="container">
-        <div class="row align-items-center" data-aos="zoom-in">
-            <!-- CTA Content -->
-            <div class="col-lg-9 text-center text-lg-start">
-                <h3>We will call you back</h3>
-                <p>
-                    It is easy to order training courses — just leave your phone number
-                    and our consultant will contact you shortly.
-                </p>
-            </div>
-
-            <!-- CTA Button -->
-            <div class="col-lg-3 text-center">
-                <a href="javascript:void(0)" class="cta-btn align-middle" data-b24-form="click/91/4uj6d3">
-                    Call me back
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- end::CTA Section -->
-
 <!-- begin::Project Section -->
 <section id="project" class="content mt-5">
     <div class="container-fluid">
@@ -623,74 +598,9 @@
 </section>
 <!-- end::Project Section -->
 
-<!-- begin::Contact Section -->
-<section id="contact" class="contact section">
-    <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div>
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-            <div class="col-lg-5">
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-map-marker-alt flex-shrink-0"></i>
-                    <div>
-                        <h4>Address</h4>
-                        <p>A108 Adam Street, New York, NY 535022</p>
-                    </div>
-                </div>
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-phone-alt flex-shrink-0"></i>
-                    <div>
-                        <h4>Call Us</h4>
-                        <p>+1 5589 55488 55</p>
-                    </div>
-                </div>
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-envelope flex-shrink-0"></i>
-                    <div>
-                        <h4>Email Us</h4>
-                        <p>info@example.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
-                    <div class="row gy-4">
-
-                        <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-
-                        <div class="col-md-6">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                        </div>
-
-                        <div class="col-md-12">
-                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                        </div>
-
-                        <div class="col-md-12">
-                            <textarea class="form-control" name="message" rows="6" placeholder="Message"
-                                required></textarea>
-                        </div>
-
-                        <div class="col-md-12 text-center">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- end::Contact Section -->
+<!--begin::CTA-->
+@include('frontend.include.cta-project-contact')
+<!--end::CTA-->
 @endsection
 
 

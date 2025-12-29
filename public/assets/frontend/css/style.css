@@ -1231,3 +1231,27 @@ section {
     box-shadow: unset !important;
   }
 }
+
+.cta-section {
+    padding: 65px 0;
+    background: linear-gradient(rgba(5, 74, 133, 0.8), rgba(5, 74, 133, 0.9)),
+                url('/assets/frontend/img/cta-bg.png') fixed center center;
+    background-size: cover;
+}
+
+.hover-image-scale {
+  display: inline-block; 
+  overflow: hidden;
+}
+.hover-image-scale img {
+  transition: 1s; 
+  display: block; 
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2);
+}
+.custom-hr {
+    border: 0 !important;
+    border-top: 3px solid rgb(31, 37, 41) !important;
+    margin: 0.5rem 0 1rem 0;
+}

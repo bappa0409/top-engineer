@@ -28,18 +28,21 @@
     
     <!-- Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Contact Details</h5>
+                    <h4 class="modal-title">Contact Details</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Name:</strong> <span id="contact-name"></span></p>
-                    <p><strong>Email:</strong> <span id="contact-email"></span></p>
+                    <p class="mb-1"><strong>Name:</strong> <span id="contact-name"></span></p>
+                    <p class="mb-1"><strong>Email:</strong> <span id="contact-email"></span></p>
                     <p><strong>Mobile:</strong> <span id="contact-mobile"></span></p>
                     <p><strong>Message:</strong> <span id="contact-message"></span></p>
                     <p><strong>Created At:</strong> <span id="contact-created"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

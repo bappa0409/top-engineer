@@ -53,13 +53,13 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a href="/" class="nav-link scrollto active">HOME </a></li>
-                <li><a href="/steel-detailing/" class="nav-link scrollto">STEEL DETALING</a></li>
-                <li><a href="/rebar-detailing/" class="nav-link scrollto">REBAR DETALING</a></li>
-                <li><a href="https://top-engineer.com/#bim-modeling/" class="nav-link scrollto">BIM MODELING</a></li>
-                <li><a href="/consulting/" class="nav-link scrollto">CONSULTING</a></li>
-                <li><a href="/portfolio/" class="nav-link scrollto">OUR PROJECTS</a></li>
-                <li><a href="/#contact/" class="nav-link scrollto">CONTACT US</a></li>
+                <li><a href="{{route('home')}}" class="nav-link scrollto {{ Request::routeIs('home') ? 'active' : '' }}"">HOME</a></li>
+                <li><a href="{{route('steel_detailing')}}" class="nav-link scrollto {{ Request::routeIs('steel_detailing') ? 'active' : '' }}">STEEL DETALING</a></li>
+                <li><a href="{{route('rebar_detailing')}}" class="nav-link scrollto {{ Request::routeIs('rebar_detailing') ? 'active' : '' }}">REBAR DETALING</a></li>
+                <li><a href="#" class="nav-link scrollto">BIM MODELING</a></li>
+                <li><a href="{{route('consulting')}}" class="nav-link scrollto {{ Request::routeIs('consulting') ? 'active' : '' }}">CONSULTING</a></li>
+                <li><a href="{{route('our_project')}}" class="nav-link scrollto {{ Request::routeIs('our_project') ? 'active' : '' }}">OUR PROJECTS</a></li>
+                <li><a href="{{route('contact')}}" class="nav-link scrollto {{ Request::routeIs('contact') ? 'active' : '' }}">CONTACT US</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>

@@ -22,6 +22,8 @@
     <link href="{{ asset('assets/frontend/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/frontend/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/frontend/vendor/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/frontend/vendor/animate/animate.min.css') }}" rel="stylesheet"/>
+
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -122,6 +124,19 @@
     <!--end::Custom-->
     
     @stack('scripts')
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+    </script>
 </body>
 
 </html>

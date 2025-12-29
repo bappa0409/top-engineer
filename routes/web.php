@@ -8,29 +8,23 @@ use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
+Route::get('/steel-detailing', [WebsiteController::class, 'steelDetailing'])->name('steel_detailing');
+Route::get('/rebar-detailing', [WebsiteController::class, 'rebarDetailing'])->name('rebar_detailing');
+Route::get('/our-projects', [WebsiteController::class, 'ourProject'])->name('our_project');
+Route::get('/consulting', [WebsiteController::class, 'consulting'])->name('consulting');
+Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
+Route::post('/contact-submit', [WebsiteController::class, 'contactSubmit'])->name('contact.submit');
 
 Route::prefix('admin')->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->name('admin.')->group(function () {
     
-    /* =========================
-        Dashboard
-    ========================= */
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-
-    /* =========================
-        Profile
-    ========================= */
     Route::controller(ProfileController::class)->prefix('profile')->name('profile.')->group(function () {
         Route::get('/', 'show')->name('show');
         Route::post('/update/{id}', 'update')->name('update');
     });
 
-    /* =========================
-        Projects
-    ========================= */
     Route::controller(ProjectController::class)->prefix('projects')->name('projects.')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/create','create')->name('create');
@@ -42,9 +36,6 @@ Route::prefix('admin')->middleware(['auth:sanctum', config('jetstream.auth_sessi
         Route::get('/visibility-change/{id:id}', 'visibilityChange')->name('visibility');
     });
 
-    /* =========================
-        Contacts
-    ========================= */
     Route::controller(ContactController::class)->prefix('contacts')->name('contacts.')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/contacts/{id}', 'show')->name('show');

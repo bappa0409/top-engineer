@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use PSpell\Config;
 
 class WebsiteController extends Controller
 {
@@ -14,5 +16,52 @@ class WebsiteController extends Controller
     {
         $projects = Project::where('status', 'published')->latest()->get();
         return view('frontend.pages.home', compact('projects'));
+    }
+
+    public function steelDetailing()
+    {
+        return view('frontend.pages.steel-detailing');
+    }
+    public function rebarDetailing()
+    {
+        return view('frontend.pages.rebar-detailing');
+    }
+    public function ourProject()
+    {
+        $projects = Project::where('status', 'published')->latest()->get();
+        return view('frontend.pages.our-project', compact('projects'));
+    }
+    public function consulting()
+    {
+        return view('frontend.pages.consulting');
+    }
+    public function contact()
+    {
+        return view('frontend.pages.contact');
+    }
+    public function contactSubmit(Request $request)
+    {
+        $request->validate([
+            'name'    => 'required|string|max:255',
+            'email'   => 'required|email',
+            'mobile'  => 'nullable|regex:/^[0-9+\-\s]{7,20}$/',
+            'message' => 'required|string|min:10',
+        ],
+        [
+            'mobile.regex' => 'Please enter a valid mobile number.',
+        ]);
+
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->mobile = $request->mobile;
+        $contact->message = $request->message;
+        $contact->save();
+
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Message sent successfully'
+        ]);
     }
 }
