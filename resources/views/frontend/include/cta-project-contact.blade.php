@@ -23,7 +23,8 @@
 </section>
 <!-- end::CTA Section -->
 
-{{-- <!-- begin::Project Section -->
+{{--
+<!-- begin::Project Section -->
 <section id="project" class="content mt-5">
     <div class="container-fluid">
 
@@ -83,7 +84,8 @@
                 </div>
             </div>
             <div class="col-lg-7">
-                <form id="contactForm" action="{{ route('contact.submit') }}" method="POST" class="php-email-form p-4" data-aos="fade-up" data-aos-delay="500">
+                <form id="contactForm" action="{{ route('contact.submit') }}" method="POST" class="php-email-form p-4"
+                    data-aos="fade-up" data-aos-delay="500">
                     @csrf
 
                     <div class="row gy-4">
@@ -93,17 +95,17 @@
                         </div>
 
                         <div class="col-md-6">
-                            <input type="number" name="mobile" class="form-control" placeholder="Mobile">
+                            <input type="text" name="mobile" class="form-control" placeholder="Mobile">
                             <small class="text-danger error-text mobile_error"></small>
                         </div>
-                        
+
                         <div class="col-md-12">
                             <input type="email" name="email" class="form-control" placeholder="Your Email*">
                             <small class="text-danger error-text email_error"></small>
                         </div>
 
                         <div class="col-md-12">
-                            <textarea name="message" class="form-control" rows="6" placeholder="Message"></textarea>
+                            <textarea name="message" class="form-control" rows="6" placeholder="Message*"></textarea>
                             <small class="text-danger error-text message_error"></small>
                         </div>
 

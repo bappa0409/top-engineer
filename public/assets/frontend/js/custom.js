@@ -41,6 +41,15 @@
         }
 
         /* ======================================
+         * GLightbox (Image Popup Preview)
+         * ====================================== */
+        if (typeof GLightbox !== 'undefined') {
+            GLightbox({
+                selector: '.lightbox-image'
+            });
+        }
+
+        /* ======================================
          * Scroll to Top Button
          * ====================================== */
         const scrollTop = $('#scroll-top');

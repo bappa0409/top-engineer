@@ -137,6 +137,50 @@
                 }
             })
     </script>
+    <script>
+    $(document).ready(function () {
+        $('#contactForm').on('submit', function (e) {
+            e.preventDefault();
+
+            const $form = $(this);
+            const url   = $form.attr('action');
+            const $btn  = $form.find('button[type="submit"]');
+
+            $('.error-text').text('');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $form.serialize(),
+
+                beforeSend: function () {
+                    $btn.prop('disabled', true).text('Submitting...');
+                },
+
+                success: function (response) {
+                    Toast.fire({
+                        icon: "success",
+                        title: response.message
+                    });
+                    $form.trigger('reset');
+                    $btn.prop('disabled', false).text('Send Message');
+                },
+
+                error: function (xhr) {
+                    $btn.prop('disabled', false).text('Send Message');
+
+                    if (xhr.status === 422) {
+                        $.each(xhr.responseJSON.errors, function (key, value) {
+                            $('.' + key + '_error').text(value[0]);
+                        });
+                    } else {
+                        toastr.error('Something went wrong!');
+                    }
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

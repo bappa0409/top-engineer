@@ -130,8 +130,110 @@
                 </div>
             </div>
 
+            <!-- Total Visitors -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card shadow-sm border-0 rounded-3 text-white bg-dark h-100">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <h6 class="card-title text-white mb-1">Total Visitors</h6>
+                            <h3 class="mb-0 text-white">{{ $totalVisitors ?? 0 }}</h3>
+                        </div>
+                        <div class="display-6 opacity-50">
+                            <i data-feather="eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today Visitors -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card shadow-sm border-0 rounded-3 text-white bg-info h-100">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <h6 class="card-title text-white mb-1">Today Visitors</h6>
+                            <h3 class="mb-0 text-white">{{ $todayVisitors ?? 0 }}</h3>
+                        </div>
+                        <div class="display-6 opacity-50">
+                            <i data-feather="calendar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <!-- Today Visitors Table -->
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h4 class="mb-0">Today Visitors</h4>
+                <span class="badge bg-primary">{{ now()->format('d M Y') }}</span>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered mb-0">
+                        <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>Name</th>
+                                <th>IP</th>
+                                <th>Visits</th>
+                                <th>Last Seen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse($todayVisitorList as $key => $v)
+                                <tr>
+                                    <td>{{ $key + 1 }}</td>
+                                    <td>{{ $v->name ?? 'Guest' }}</td>
+                                    <td>{{ $v->ip }}</td>
+                                    <td><span class="badge bg-info">{{ $v->visits }}</span></td>
+                                    <td>{{ $v->updated_at->format('h:i A') }}</td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="5" class="text-center">No visitors today</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Contacts Table -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="mb-0">Recent Contacts</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>SL</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse($recentContacts as $key => $contact)
+                            <tr>
+                                <td>{{ $key + 1 }}</td>
+                                <td>{{ $contact->name }}</td>
+                                <td>{{ $contact->email }}</td>
+                                <td>{{ $contact->mobile ?? 'N/A' }}</td>
+                                <td>{{ \Str::limit($contact->message, 50) }}</td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="5" class="text-center">No contacts found</td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
         <!-- Recent Projects Table -->
         <div class="card mb-4">
@@ -171,42 +273,6 @@
                 </table>
             </div>
         </div>
-
-        <!-- Recent Contacts Table -->
-        <div class="card mb-4">
-            <div class="card-header">
-                <h4 class="mb-0">Recent Contacts</h4>
-            </div>
-            <div class="card-body">
-                <table class="table table-hover table-bordered">
-                    <thead>
-                        <tr>
-                            <th>SL</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Mobile</th>
-                            <th>Message</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse($recentContacts as $key => $contact)
-                            <tr>
-                                <td>{{ $key + 1 }}</td>
-                                <td>{{ $contact->name }}</td>
-                                <td>{{ $contact->email }}</td>
-                                <td>{{ $contact->mobile ?? 'N/A' }}</td>
-                                <td>{{ \Str::limit($contact->message, 50) }}</td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="5" class="text-center">No contacts found</td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
     </div>
 </section>
 

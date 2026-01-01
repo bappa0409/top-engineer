@@ -26,42 +26,53 @@
 
     </div>
 </div>
-
 <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-        <a href="{{route('home')}}" class="logo">
-            <img src="{{ asset('assets/frontend/img/logo.png') }}" alt="Topengineer logo" class="">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Logo (LEFT) -->
+        <a href="{{ route('home') }}" class="logo d-flex align-items-center">
+            <img src="{{ asset('assets/frontend/img/logo.png') }}" class="img-fluid py-2" alt="M&E Engineers">
         </a>
 
-        <div class="d-xs-block d-lg-none socializer a sr-48px sr-squircle sr-float sr-icon-grey sr-bg-none">
-            <span class="sr-linkedin"> 
-                <a href="https://www.linkedin.com/company/top-engineer/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            </span>
-            <span class="sr-whatsapp"> 
-                <a href="https://wa.me/message/NJAV34FHKK47G1" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i>
-                </a>
-            </span>
-            <span class="sr-telegram"> 
-                <a href="https://telegram.me/TopEngineerChat" target="_blank" title="Telegram"><i class="bi bi-telegram"></i>
-                </a>
-            </span>
-            <span class="sr-skype"> 
-                <a href="skype:perezhog" target="_blank" title="Skype"><i class="bi bi-skype"></i>
-                </a>
-            </span>
+        <!-- RIGHT SIDE (Mobile only) -->
+        <div class="d-flex align-items-center ms-auto d-lg-none gap-3">
+
+            <!-- Social Icons -->
+            <div class="socializer sr-32px sr-icon-grey sr-bg-none">
+                <span class="sr-linkedin">
+                    <a href="https://www.linkedin.com/company/top-engineer/" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </span>
+                <span class="sr-whatsapp">
+                    <a href="https://wa.me/message/NJAV34FHKK47G1" target="_blank">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </span>
+                <span class="sr-telegram">
+                    <a href="https://t.me/TopEngineerChat" target="_blank">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                </span>
+            </div>
+
+            <!-- Mobile Nav Toggle -->
+            <i class="bi bi-list mobile-nav-toggle"></i>
+
         </div>
 
-        <nav id="navbar" class="navbar">
+        <!-- Desktop Navigation -->
+        <nav id="navbar" class="navbar d-none d-lg-flex">
             <ul>
-                <li><a href="{{route('home')}}" class="nav-link scrollto {{ Request::routeIs('home') ? 'active' : '' }}"">HOME</a></li>
-                <li><a href="{{route('steel_detailing')}}" class="nav-link scrollto {{ Request::routeIs('steel_detailing') ? 'active' : '' }}">STEEL DETALING</a></li>
-                <li><a href="{{route('rebar_detailing')}}" class="nav-link scrollto {{ Request::routeIs('rebar_detailing') ? 'active' : '' }}">REBAR DETALING</a></li>
-                <li><a href="#" class="nav-link scrollto">BIM MODELING</a></li>
-                <li><a href="{{route('consulting')}}" class="nav-link scrollto {{ Request::routeIs('consulting') ? 'active' : '' }}">CONSULTING</a></li>
-                <li><a href="{{route('our_project')}}" class="nav-link scrollto {{ Request::routeIs('our_project') ? 'active' : '' }}">OUR PROJECTS</a></li>
-                <li><a href="{{route('contact')}}" class="nav-link scrollto {{ Request::routeIs('contact') ? 'active' : '' }}">CONTACT US</a></li>
+                <li><a href="{{route('home')}}" class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}">HOME</a>
+                </li>
+                <li><a href="{{route('steel_detailing')}}" class="nav-link">STEEL DETAILING</a></li>
+                <li><a href="{{route('rebar_detailing')}}" class="nav-link">REBAR DETAILING</a></li>
+                <li><a href="{{route('consulting')}}" class="nav-link">CONSULTING</a></li>
+                <li><a href="{{route('our_project')}}" class="nav-link">PROJECTS</a></li>
+                <li><a href="{{route('contact')}}" class="nav-link">CONTACT</a></li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
+
     </div>
 </header>
