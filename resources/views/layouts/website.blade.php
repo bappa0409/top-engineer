@@ -65,10 +65,10 @@
                     </a>
                 </span>
 
-                <!-- Skype -->
-                <span class="sr-skype">
-                    <a href="skype:perezhog" target="_blank" title="Skype">
-                        <i class="bi bi-skype"></i>
+                <!-- Facebook -->
+                <span class="sr-facebook">
+                    <a href="https://t.me/TopEngineerChat" target="_blank" title="Facebook">
+                        <i class="bi bi-facebook"></i>
                     </a>
                 </span>
 

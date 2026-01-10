@@ -12,7 +12,7 @@
     <title>@yield('title')</title>
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('assets/admin/img/icons/icon-48x48.png')}}" />
+    <link rel="shortcut icon" href="{{asset('assets/admin/img/favicon.png')}}" />
 
     @include('include.css')
     

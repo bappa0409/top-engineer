@@ -95,8 +95,8 @@
 
 .sr-48px a {
   width: 27px;
-  height: 40px;
-  line-height: 42px;
+  height: 35px;
+  line-height: 35px;
   font-size: 19px
 }
 
@@ -441,7 +441,12 @@
   border-color: #179cde;
   background-color: #179cde
 }
-
+.socializer .sr-facebook a,
+.socializer .sr-facebook a:visited {
+  color: #179cde;
+  border-color: #179cde;
+  background-color: #179cde
+}
 .socializer .sr-tiktok a,
 .socializer .sr-tiktok a:visited {
   color: #010101;

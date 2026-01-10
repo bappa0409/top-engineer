@@ -21,6 +21,26 @@ h1,h2,h3,h4,h5,h6{font-family:"Raleway",sans-serif;}
   padding-right:50px !important;
 }
 
+.text-justify {
+    text-align: justify;
+}
+.col-lg-5th {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 240px;              /* same height for all */
+    object-fit: cover;          /* prevents stretching */
+    object-position: center;    /* center crop */
+    display: block;
+}
 
 /* ===== Mobile Responsive Patch ===== */
 html, body { overflow-x: hidden; }
@@ -563,7 +583,6 @@ section{padding:60px 0 20px;overflow:hidden;}
   overflow:hidden;
   padding:30px;
   border-radius:var(--radius);
-  /* box-shadow:var(--shadow); */
 }
 .single-image-block img{
   width:100%;
@@ -573,6 +592,72 @@ section{padding:60px 0 20px;overflow:hidden;}
 }
 .single-image-block:hover img{transform:scale(1.08);}
 
+/* ABOUT */
+.about-image-block img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+}
+
+/* WHY CHOOSE US */
+.why-choose-image-block img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+
+/* STEEL DESIGN */
+.steel-design-image-block img{
+  width:100%;
+  height:600px;
+  object-fit:cover;
+}
+
+/* BIM */
+.bim-image-block img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+/* STRUCTURAL ANALYSIS */
+.stucture-analysis-block{
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.stucture-analysis-block img{
+  width: 100%;
+  height: 160px;        /* fixed height */
+  object-fit: cover;   /* no stretch */
+  transition: transform .4s ease;
+}
+
+.stucture-analysis-block:hover img{
+  transform: scale(1.08);
+}
+/* CONNECTION DESIGN */
+
+
+.single-image-block-connection{
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  border-radius: var(--radius);
+}
+
+.single-image-block-connection img{
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.single-image-block-connection:hover img{
+  transform: scale(1.08);
+}
+
 /* Project grid images (fixed height) */
 .project-item .project-image-block{
   position:relative;
@@ -580,7 +665,6 @@ section{padding:60px 0 20px;overflow:hidden;}
   height:220px;
   overflow:hidden;
   border-radius:var(--radius);
-  /* box-shadow:var(--shadow); */
 }
 .project-item .project-image-block img{
   width:100%;

@@ -16821,7 +16821,8 @@ body[data-theme=colored] .sidebar-content {
     flex-grow: 1;
     list-style: none;
     margin-bottom: 0;
-    padding-left: 0
+    padding-left: 0;
+    padding-top: 25px;
 }
 .sidebar-link,a.sidebar-link {
     background: #222e3c;

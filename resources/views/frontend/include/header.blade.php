@@ -7,19 +7,19 @@
             <!-- Address -->
             <div class="d-flex align-items-center">
                 <i class="fas fa-map-marker-alt me-2 d-none d-lg-inline"></i>
-                <span class="d-none d-lg-inline">Kosovska 17, Beograd-stari grad, Serbia</span>
+                <span class="d-none d-lg-inline">332- South Paikpara, Bottola, Mirpur-1, Dhaka</span>
             </div>
 
             <!-- Phone -->
             <div class="d-flex align-items-center">
                 <i class="fas fa-phone-alt me-2 d-none d-md-inline"></i>
-                <a href="tel:+381114220621" class="d-none d-md-inline">+3 811 142 20 62 1</a>
+                <a href="tel:+01775964400" class="d-none d-md-inline">+88 01775 964400</a>
             </div>
 
             <!-- Email -->
             <div class="d-flex align-items-center">
                 <i class="fas fa-envelope me-2"></i>
-                <a href="mailto:info@top-engineer.com">info@top-engineer.com</a>
+                <a href="mailto:info@meengineers.com">info@meengineers.com</a>
             </div>
 
         </div>
@@ -54,6 +54,12 @@
                         <i class="bi bi-telegram"></i>
                     </a>
                 </span>
+                
+                <span class="sr-facebook">
+                    <a href="https://t.me/TopEngineerChat" target="_blank">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </span>
             </div>
 
             <!-- Mobile Nav Toggle -->
@@ -67,7 +73,7 @@
                 <li><a href="{{route('home')}}" class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}">HOME</a>
                 </li>
                 <li><a href="{{route('steel_detailing')}}" class="nav-link">STEEL DETAILING</a></li>
-                <li><a href="{{route('rebar_detailing')}}" class="nav-link">REBAR DETAILING</a></li>
+                <li><a href="#" class="nav-link">REBAR DETAILING</a></li>
                 <li><a href="{{route('consulting')}}" class="nav-link">CONSULTING</a></li>
                 <li><a href="{{route('our_project')}}" class="nav-link">PROJECTS</a></li>
                 <li><a href="{{route('contact')}}" class="nav-link">CONTACT</a></li>
