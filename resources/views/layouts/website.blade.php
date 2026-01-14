@@ -138,49 +138,81 @@
             })
     </script>
     <script>
-    $(document).ready(function () {
-        $('#contactForm').on('submit', function (e) {
-            e.preventDefault();
+        $(document).ready(function () {
+            $('#contactForm').on('submit', function (e) {
+                e.preventDefault();
 
-            const $form = $(this);
-            const url   = $form.attr('action');
-            const $btn  = $form.find('button[type="submit"]');
+                const $form = $(this);
+                const url   = $form.attr('action');
+                const $btn  = $form.find('button[type="submit"]');
 
-            $('.error-text').text('');
+                $('.error-text').text('');
 
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $form.serialize(),
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: $form.serialize(),
 
-                beforeSend: function () {
-                    $btn.prop('disabled', true).text('Submitting...');
-                },
+                    beforeSend: function () {
+                        $btn.prop('disabled', true).text('Submitting...');
+                    },
 
-                success: function (response) {
-                    Toast.fire({
-                        icon: "success",
-                        title: response.message
-                    });
-                    $form.trigger('reset');
-                    $btn.prop('disabled', false).text('Send Message');
-                },
-
-                error: function (xhr) {
-                    $btn.prop('disabled', false).text('Send Message');
-
-                    if (xhr.status === 422) {
-                        $.each(xhr.responseJSON.errors, function (key, value) {
-                            $('.' + key + '_error').text(value[0]);
+                    success: function (response) {
+                        Toast.fire({
+                            icon: "success",
+                            title: response.message
                         });
-                    } else {
-                        toastr.error('Something went wrong!');
+                        $form.trigger('reset');
+                        $btn.prop('disabled', false).text('Send Message');
+                    },
+
+                    error: function (xhr) {
+                        $btn.prop('disabled', false).text('Send Message');
+
+                        if (xhr.status === 422) {
+                            $.each(xhr.responseJSON.errors, function (key, value) {
+                                $('.' + key + '_error').text(value[0]);
+                            });
+                        } else {
+                            toastr.error('Something went wrong!');
+                        }
                     }
-                }
+                });
             });
         });
-    });
-</script>
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelectorAll(".read-more-btn").forEach(function (readMoreBtn) {
+                readMoreBtn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+
+                    const p = readMoreBtn.closest("p");
+                    const content = p.querySelector(".read-more-content");
+                    const readLessBtn = p.querySelector(".read-less-btn");
+
+                    content.classList.remove("d-none");
+                    readMoreBtn.classList.add("d-none");
+                });
+            });
+
+            document.querySelectorAll(".read-less-btn").forEach(function (readLessBtn) {
+                readLessBtn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+
+                    const p = readLessBtn.closest("p");
+                    const content = p.querySelector(".read-more-content");
+                    const readMoreBtn = p.querySelector(".read-more-btn");
+
+                    content.classList.add("d-none");
+                    readMoreBtn.classList.remove("d-none");
+                });
+            });
+
+        });
+    </script>
 </body>
 
 </html>

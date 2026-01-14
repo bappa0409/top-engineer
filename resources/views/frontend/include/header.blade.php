@@ -26,6 +26,7 @@
 
     </div>
 </div>
+
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -62,21 +63,25 @@
                 </span>
             </div>
 
-            <!-- Mobile Nav Toggle -->
-            <i class="bi bi-list mobile-nav-toggle"></i>
+            <!-- Nav Toggle -->
+            <i class="mobile-nav-toggle bi bi-list"></i>
+            
 
         </div>
 
         <!-- Desktop Navigation -->
-        <nav id="navbar" class="navbar d-none d-lg-flex">
+        <nav id="navbar" class="navbar">
             <ul>
-                <li><a href="{{route('home')}}" class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}">HOME</a>
+                <li class="nav-close d-lg-none px-4">
+                    <i class="bi bi-x"></i>
                 </li>
-                <li><a href="{{route('steel_detailing')}}" class="nav-link">STEEL DETAILING</a></li>
+                <li><a href="{{route('home')}}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">HOME</a>
+                </li>
+                <li><a href="{{route('steel_detailing')}}" class="nav-link {{ request()->routeIs('steel_detailing') ? 'active' : '' }}">STEEL DETAILING</a></li>
                 <li><a href="#" class="nav-link">REBAR DETAILING</a></li>
-                <li><a href="{{route('consulting')}}" class="nav-link">CONSULTING</a></li>
-                <li><a href="{{route('our_project')}}" class="nav-link">PROJECTS</a></li>
-                <li><a href="{{route('contact')}}" class="nav-link">CONTACT</a></li>
+                <li><a href="{{route('consulting')}}" class="nav-link {{ request()->routeIs('consulting') ? 'active' : '' }}">CONSULTING</a></li>
+                <li><a href="{{route('our_project')}}" class="nav-link {{ request()->routeIs('our_project') ? 'active' : '' }}">PROJECTS</a></li>
+                <li><a href="{{route('contact')}}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">CONTACT</a></li>
             </ul>
         </nav>
 

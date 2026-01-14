@@ -11,12 +11,26 @@
 </section>
 
 
-<!-- begin::Steel Detailing Section -->
-<section id="steel-detailing" class="content">
+<!-- begin::What We Offer Section -->
+<section id="what-we-offer" class="content pt-5 pt-5-mobile">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content d-lg-none d-xl-block">
+
+            <!-- IMAGE (first on mobile) -->
+            <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-right">
+                
+                <div class="page-what-we-offer-image-block border">
+                    <a href="{{ asset('assets/frontend/img/consulting/01.png') }}"
+                        data-gallery="serviceGallery" class="lightbox-image preview-link">
+                        <img src="{{ asset('assets/frontend/img/consulting/01.png') }}" loading="lazy"
+                            class="img-fluid" alt="Erection Drawing Service">
+                    </a>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-lg-6 order-2 order-lg-2 pt-5-mobile" data-aos="fade-left">
+                <div>
                     <h3> <strong>What We Offer</strong></h3>
                     <p>Structural Steel Design Consultancy
                         Optimized design solutions that balance safety, economy, and constructability.Connection Design
@@ -32,34 +46,35 @@
                         Helping bridge the gap between architects, engineers, and fabricators for seamless project
                         execution.
                     </p>
+                </div>
+            </div>
 
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/consulting/01.png') }}" class="img-fluid"
-                        alt="Steel Detailing">
-                </div>
-            </div>
         </div>
     </div>
 </section>
-<!-- end::Steel Detailing Section -->
+<!-- end::Steel Detailing Team Section -->
 
-<!-- begin::Rebar Detailing Section -->
-<section id="rebar-detailing" class="content">
+
+<!-- begin::Why Partner Section -->
+<section id="why-partner" class="content pt-5 pt-5-mobile">
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-lg-6 mt-4" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/consulting/02.png') }}" class="img-fluid"
-                        alt="STRUCTURAL STEEL DETAILING ADVANCE TECHNOLOGY">
+            <!-- IMAGE (first on mobile) -->
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-right">
+                
+                <div class="page-why-partner-image-block border">
+                    <a href="{{ asset('assets/frontend/img/consulting/02.png') }}"
+                        data-gallery="serviceGallery" class="lightbox-image preview-link">
+                        <img src="{{ asset('assets/frontend/img/consulting/02.png') }}" loading="lazy"
+                            class="img-fluid" alt="Erection Drawing Service">
+                    </a>
                 </div>
             </div>
 
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content">
+            <!-- CONTENT -->
+            <div class="col-lg-6 order-2 order-lg-1 pt-5-mobile" data-aos="fade-left">
+                <div>
                     <h3> <strong>Why Partner With Us?</strong></h3>
                     <p>Expert Knowledge: Deep technical expertise in steel structures across diverse sectors—bridges,
                         power plants, industrial facilities, and metro rail projects.
@@ -76,7 +91,7 @@
         </div>
     </div>
 </section>
-<!-- end::Rebar Detailing Section -->
+<!-- end::Why Partner Section -->
 
 <!--begin::CTA-->
 @include('frontend.include.cta-project-contact')

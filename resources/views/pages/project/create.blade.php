@@ -76,13 +76,7 @@
                             <input type="number" name="weight"
                                 class="form-control" value="{{ old('weight') }}">
                         </div>
-
-                        <!-- Number of Parts -->
-                        <div class="col-md-4 mb-3">
-                            <label class="form-label">Number of Parts</label>
-                            <input type="number" name="number_of_parts"
-                                class="form-control" value="{{ old('number_of_parts') }}">
-                        </div>
+                        
 
                         <!-- Purpose -->
                         <div class="col-md-6 mb-3">

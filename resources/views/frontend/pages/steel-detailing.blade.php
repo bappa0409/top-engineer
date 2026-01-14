@@ -65,39 +65,26 @@
 </section>
 <!-- end::Portfolio Section -->
 
-{{-- <!-- begin::Steel Detailing Section -->
-<section id="steel-detailing" class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content d-lg-none d-xl-block">
-                    <h3> <strong>STEEL DETAILING SERVICES</strong></h3>
-                    <p> Topengineer INC offers comprehensive solutions to the steel detailing needs of a wide array of
-                        clientele ranging from fabricators, contractors, designers, and structural engineers. Being a
-                        leading steel detailing company we have the technical expertise and manpower to handle steel
-                        detailing for 5,000 tons per month. For nearly a decade we have been offering steel detailing
-                        services of impeccable quality by strictly adhering to the international industry standards in
-                        steel detailing which include AISC, ANSI, OSHA & RSIO to name a few.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/01.png') }}" class="img-fluid"
-                        alt="Steel Detailing">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end::Steel Detailing Section --> --}}
 
 <!-- begin::Steel Detailing Services Section -->
-<section id="steel-detailing-services" class="content">
+<section id="steel-detailing-services" class="content pt-5-mobile">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content d-lg-none d-xl-block">
+
+            <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-right">
+                
+                <div class="page-detailing-design-image-block border">
+                    <a href="{{ asset('assets/frontend/img/steel_detailing/01.png') }}"
+                        data-gallery="serviceGallery" class="lightbox-image preview-link">
+                        <img src="{{ asset('assets/frontend/img/steel_detailing/01.png') }}" loading="lazy"
+                            class="img-fluid" alt="Erection Drawing Service">
+                    </a>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-lg-6 order-2 order-lg-2 pt-5-mobile" data-aos="fade-left">
+                <div>
                     <h3><strong>STEEL DETAILING SERVICES</strong></h3>
                     <p>
                         M&E Engineers provides comprehensive steel detailing services for fabricators, contractors, designers, and structural engineers.
@@ -115,11 +102,6 @@
                 </div>
             </div>
 
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/01.png') }}" class="img-fluid" alt="Steel Detailing Services">
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -129,9 +111,11 @@
 <!-- begin::Advanced Technology Section -->
 <section id="advanced-technology" class="content">
     <div class="container-fluid">
-        <div class="row flex-lg-row-reverse">
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content d-lg-none d-xl-block">
+        <div class="row">
+
+            <!-- CONTENT -->
+            <div class="col-lg-6 order-2 order-lg-1 pt-5-mobile" data-aos="fade-left">
+                <div>
                     <h3><strong>ADVANCED TECHNOLOGY IN STRUCTURAL STEEL DETAILING</strong></h3>
                     <p>
                         M&E Engineers leverages the latest software and technology to produce highly accurate structural steel drawings,
@@ -144,10 +128,15 @@
                     </p>
                 </div>
             </div>
-
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/02.png') }}" class="img-fluid" alt="Advanced Technology in Steel Detailing">
+            
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-right">
+                
+                <div class="page-advanced-technology-image-block border">
+                    <a href="{{ asset('assets/frontend/img/steel_detailing/02.png') }}"
+                        data-gallery="serviceGallery" class="lightbox-image preview-link">
+                        <img src="{{ asset('assets/frontend/img/steel_detailing/02.png') }}" loading="lazy"
+                            class="img-fluid" alt="Erection Drawing Service">
+                    </a>
                 </div>
             </div>
         </div>
@@ -160,8 +149,22 @@
 <section id="steel-detailing-team" class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content d-lg-none d-xl-block">
+
+            <!-- IMAGE (first on mobile) -->
+            <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-right">
+                
+                <div class="page-steel-detailing-team-image-block border">
+                    <a href="{{ asset('assets/frontend/img/steel_detailing/03.png') }}"
+                        data-gallery="serviceGallery" class="lightbox-image preview-link">
+                        <img src="{{ asset('assets/frontend/img/steel_detailing/03.png') }}" loading="lazy"
+                            class="img-fluid" alt="Erection Drawing Service">
+                    </a>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-lg-6 order-2 order-lg-2 pt-5-mobile" data-aos="fade-left">
+                <div>
                     <h3><strong>OUR STEEL DETAILING TEAM</strong></h3>
                     <p>
                         M&E Engineers, our strength lies in our skilled and experienced steel detailing team. Our professional detailers deliver accurate,
@@ -178,11 +181,6 @@
                 </div>
             </div>
 
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/03.png') }}" class="img-fluid" alt="Our Steel Detailing Team">
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -192,9 +190,11 @@
 <!-- begin::Quality Policy Section -->
 <section id="quality-policy" class="content">
     <div class="container-fluid">
-        <div class="row flex-lg-row-reverse">
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content d-lg-none d-xl-block">
+        <div class="row">
+
+            <!-- CONTENT -->
+            <div class="col-lg-6 order-2 order-lg-1 pt-5-mobile" data-aos="fade-left">
+                <div>
                     <h3><strong>QUALITY POLICY</strong></h3>
                     <p>
                         M&E Engineers, our goal is to be a leading provider of steel detailing services by consistently delivering the highest quality work.
@@ -206,10 +206,15 @@
                     </p>
                 </div>
             </div>
-
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/04.png') }}" class="img-fluid" alt="Quality Policy">
+            
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-right">
+                
+                <div class="page-quality-policy-image-block border">
+                    <a href="{{ asset('assets/frontend/img/steel_detailing/04.png') }}"
+                        data-gallery="serviceGallery" class="lightbox-image preview-link">
+                        <img src="{{ asset('assets/frontend/img/steel_detailing/04.png') }}" loading="lazy"
+                            class="img-fluid" alt="Erection Drawing Service">
+                    </a>
                 </div>
             </div>
         </div>
@@ -222,8 +227,22 @@
 <section id="why-choose-us" class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content d-lg-none d-xl-block">
+
+            <!-- IMAGE (first on mobile) -->
+            <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-right">
+                
+                <div class="page-why-choose-us-image-block border">
+                    <a href="{{ asset('assets/frontend/img/steel-detailing-me-engineers.webp') }}"
+                        data-gallery="serviceGallery" class="lightbox-image preview-link">
+                        <img src="{{ asset('assets/frontend/img/steel-detailing-me-engineers.webp') }}" loading="lazy"
+                            class="img-fluid" alt="Erection Drawing Service">
+                    </a>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-lg-6 order-2 order-lg-2 pt-5-mobile" data-aos="fade-left">
+                <div>
                     <h3><strong>WHY CHOOSE M&E ENGINEERS AS YOUR STRUCTURAL STEEL DETAILER?</strong></h3>
                     <p>
                         M&E Engineers, we are committed to delivering clean, accurate, and reliable steel detailing services that support your project’s success.
@@ -239,149 +258,13 @@
                 </div>
             </div>
 
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/05.png') }}" class="img-fluid" alt="Why Choose M&E Engineers">
-                </div>
-            </div>
         </div>
     </div>
 </section>
 <!-- end::Why Choose Us Section -->
 
 
-{{-- 
-<!-- begin::Rebar Detailing Section -->
-<section id="rebar-detailing" class="content">
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-lg-6 mt-4" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/02.jpg') }}" class="img-fluid"
-                        alt="STRUCTURAL STEEL DETAILING ADVANCE TECHNOLOGY">
-                </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content">
-                    <h3> <strong>STRUCTURAL STEEL DETAILING ADVANCE TECHNOLOGY</strong></h3>
-                    <p> Topengineer INC stays on the cutting edge of technology by using the latest available software
-                        in order to produce the most accurate structural steel drawings, shop drawings, miscellaneous
-                        steel detailed drawings, and framing plans. Topengineer INC can accommodate many different file
-                        exports as well as material data file formats. We believe part of the secret to our success is
-                        the combination of using the latest technology available, regular software upgrades, and the
-                        capablility of delivering different file types.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- end::Rebar Detailing Section -->
-
-<!-- begin::Bim Modeling Section -->
-<section id="bim-modeling" class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content">
-                    <h3> <strong>STEEL DETAILING TEAM</strong></h3>
-                    <p>We pride ourselves in our skilled structural detailing team with years of experience under their
-                        belt. Our team of professional steel detailers are trained to provide clean, accurate and
-                        comprehensive structural detailing services on schedule. Our concern will always be not only to
-                        meet but to exceed our customer’s expectations, needs and demands. At TOPENGINEER INC we believe
-                        that the quality of service we provide is directly related the individuals we hire. Therefore,
-                        we only employ competent, highly experienced qualified individuals. In addition to this, we
-                        focus on providing continuous improvement in education and training for our structural detailing
-                        team. Detailing software is only as good as the people using it and TOPENGINEER INC has gathered
-                        the best in the field. A comprehensive knowledge of 3D modeling is essential to meet the
-                        challenges of steel detailing!
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/03.png') }}" class="img-fluid"
-                        alt="BIM Modeling">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- end::Bim Modeling Section -->
-
-<!-- begin::Structural Analysis Section -->
-<section id="structural-analysis" class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6 mt-4" data-aos="fade-right">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/04.png') }}" class="img-fluid"
-                        alt="STRUCTURAL ANALYSIS AND DESIGN TEKLA STRUCTURES">
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content">
-                    <h3><strong>QUALITY POLICY</strong></h3>
-                    <p>
-                        Our goal is to continue to be the top leading steel detailing provider. To ensure our clients
-                        receive the best quality steel detailing services, TOPENGINEER INC we believe that the quality
-                        of service we provide is directly related the individuals we hire. Therefore, we only employ
-                        competent has established an implements an efficient quality control system that meets all the
-                        requirements of the National Institute of Steel Detailing Quality Procedures Program
-                        Certification, and American Institute of Steel Construction (NISD,QPP,AISC). Our quality control
-                        system sets to assure accuracy, and perform to standard detailing practices.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- end::Structural Analysis Section -->
-
-<!-- begin::Connection Design Section -->
-<section id="connection-design" class="content">
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="inner-content">
-                    <h3><strong>WHY CHOOSE US AS YOUR STRUCTURAL STEEL DETAILER?</strong></h3>
-
-                    <p class="p-4 fst-italic text-secondary">
-                        We strive for excellence to meet our clients needs TOPENGINEER INC Delivers clean, accurate
-                        drawings Competitive rates Highly Skilled Experienced Steel structural detailing team
-                    </p>
-
-                    <p>
-                        TOPENGINEER INC is commited to our clients success by working diligently to meet customers
-                        demands and provide the highest quality of finished projects in the industry. We strive for
-                        excellence and to be available to you when you need us. Our mission is to be more than just
-                        another company offering drafting services. Our goal is to be a valued business partner that
-                        work together on projects. MDS works with engineering firms, steel fabrication shops and
-                        contractors. Our structural steel shop drawings are produced in either metric or imperial
-                        measures and in full compliance with AISC and CISC standards, as well as with the standard steel
-                        detailing practices. When you need a professional steel detailer to do the job right the first
-                        time, then you need to call us!
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="inner-content">
-                    <img src="{{ asset('assets/frontend/img/steel_detailing/05.jpg') }}" class="img-fluid"
-                        alt="CONNECTION DESIGN BIM IDEA StatiCa">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end::Connection Design Section -->
-
 <!--begin::CTA-->
 @include('frontend.include.cta-project-contact')
-<!--end::CTA--> --}}
+<!--end::CTA-->
 @endsection

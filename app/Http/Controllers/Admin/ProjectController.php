@@ -38,7 +38,6 @@ class ProjectController extends Controller
             'dimensions'        => 'nullable|string|max:255',
             'building_height'   => 'nullable|numeric',
             'weight'            => 'nullable|numeric',
-            'number_of_parts'   => 'nullable|integer',
             'purpose'           => 'nullable|string|max:255',
             'documentation'     => 'nullable|string|max:255',
         ]);
@@ -51,7 +50,6 @@ class ProjectController extends Controller
         $project->dimensions        = $request->dimensions;
         $project->building_height   = $request->building_height;
         $project->weight            = $request->weight;
-        $project->number_of_parts   = $request->number_of_parts;
         $project->purpose           = $request->purpose;
         $project->documentation     = $request->documentation;
 
@@ -103,7 +101,6 @@ class ProjectController extends Controller
             'dimensions'        => 'nullable|string|max:255',
             'building_height'   => 'nullable|numeric',
             'weight'            => 'nullable|numeric',
-            'number_of_parts'   => 'nullable|integer',
             'purpose'           => 'nullable|string|max:255',
             'documentation'     => 'nullable|string|max:255',
         ]);
@@ -116,7 +113,6 @@ class ProjectController extends Controller
         $project->dimensions        = $request->dimensions;
         $project->building_height   = $request->building_height;
         $project->weight            = $request->weight;
-        $project->number_of_parts   = $request->number_of_parts;
         $project->purpose           = $request->purpose;
         $project->documentation     = $request->documentation;
 

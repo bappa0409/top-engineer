@@ -134,8 +134,24 @@
   on('click', '.mobile-nav-toggle', function () {
     select('#navbar').classList.toggle('navbar-mobile');
     this.classList.toggle('bi-list');
-    this.classList.toggle('bi-x');
   });
+
+  /**
+ * Mobile nav close button (inside UL)
+ */
+on('click', '.nav-close', function () {
+  let navbar = select('#navbar');
+  let navbarToggle = select('.mobile-nav-toggle');
+
+  if (navbar) navbar.classList.remove('navbar-mobile');
+
+  // Toggle icon back to list (safe way)
+  if (navbarToggle) {
+    navbarToggle.classList.add('bi-list');
+    navbarToggle.classList.remove('bi-x');
+  }
+});
+
 
   /**
    * Mobile nav dropdowns activate

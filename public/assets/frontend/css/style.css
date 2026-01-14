@@ -16,30 +16,31 @@ a{color:var(--brand);text-decoration:none;}
 a:hover{color:var(--brand-hover);text-decoration:none;}
 h1,h2,h3,h4,h5,h6{font-family:"Raleway",sans-serif;}
 
+.read-more-btn,
+.read-less-btn {
+    cursor: pointer;
+}
+
+.read-more-btn:hover,
+.read-less-btn:hover {
+    text-decoration: underline;
+}
 .container-fluid{
   padding-left:50px !important;
   padding-right:50px !important;
 }
 
-.text-justify {
-    text-align: justify;
-}
-.col-lg-5th {
-    flex: 0 0 20%;
-    max-width: 20%;
-}
+.text-justify { text-align: justify; }
 
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-}
+.col-lg-5th { flex: 0 0 20%; max-width: 20%; }
 
+.portfolio-item { position: relative; overflow: hidden; }
 .portfolio-item img {
-    width: 100%;
-    height: 240px;              /* same height for all */
-    object-fit: cover;          /* prevents stretching */
-    object-position: center;    /* center crop */
-    display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* ===== Mobile Responsive Patch ===== */
@@ -47,18 +48,22 @@ html, body { overflow-x: hidden; }
 img, iframe { max-width: 100%; }
 
 /* container-fluid padding fix */
-.container-fluid{ padding-left:50px; padding-right:50px; }
 @media (max-width: 992px){
-  .container-fluid{ padding-left:30px; padding-right:30px; }
+  .container-fluid{ padding-left:30px !important; padding-right:30px !important; }
 }
 @media (max-width: 576px) {
-    .container-fluid {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-    }
-    .content{
-          padding: 0px !important;
-    }
+  .container-fluid { padding-left: 40px !important; padding-right: 40px !important; }
+  .container { padding-left: 40px !important; padding-right: 40px !important; }
+  .content{ padding-top: 0rem !important; margin-top: 0px!important; }
+  #hero p{ width: 100% !important; }
+  #contactForm{ padding: 0px!important; }
+  .pt-5-mobile{
+    padding-top: 3rem !important;
+  }
+  .px-0-mobile{
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
 }
 
 /* ==========================================================
@@ -237,6 +242,14 @@ img, iframe { max-width: 100%; }
   .navbar .dropdown .dropdown ul{left:-90%;}
   .navbar .dropdown .dropdown:hover>ul{left:-100%;}
 }
+.nav-close { text-align: right; padding: 15px 20px; cursor: pointer; }
+.nav-close i {
+  font-size: 28px;
+  color: #5f5f5f;
+  border: 1px solid #5f5f5f;
+  border-radius: 4px;
+  padding: 0px 5px;
+}
 
 /* Mobile */
 .mobile-nav-toggle{
@@ -298,7 +311,7 @@ img, iframe { max-width: 100%; }
    ========================================================== */
 #hero{
   width:100%;
-  height:80vh;
+  height:90vh;
   overflow:hidden;
   position:relative;
   background:url("/assets/frontend/img/hero-bg.png") top center no-repeat;
@@ -306,6 +319,7 @@ img, iframe { max-width: 100%; }
   margin-bottom:-90px;
   z-index:99;
   transition:.3s;
+  padding:100px 0 50px 0;
 }
 #hero:before{
   content:"";
@@ -366,7 +380,7 @@ img, iframe { max-width: 100%; }
   #hero .carousel-control-next{width:5%;}
 }
 @media (max-width:768px), (max-height:700px){
-  #hero{height:120vh;padding:100px 0;}
+  /* #hero{height:100vh;padding:100px 0 50px 0;} */
   #hero h2{font-size:28px;}
 }
 
@@ -428,6 +442,7 @@ section{padding:60px 0 20px;overflow:hidden;}
   .content .inner-content{padding-top:30px;}
 }
 
+
 /* ==========================================================
    CTA
    ========================================================== */
@@ -460,7 +475,6 @@ section{padding:60px 0 20px;overflow:hidden;}
   .cta .cta-btn-container{display:flex;align-items:center;justify-content:flex-end;}
 }
 
-/* Extra CTA section (keep if you use it) */
 .cta-section{
   padding:65px 0;
   background:
@@ -530,7 +544,6 @@ section{padding:60px 0 20px;overflow:hidden;}
 }
 .contact .php-email-form button[type=submit]:hover{background:var(--brand);color:#fff;}
 
-/* Loading animation */
 @keyframes animate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
 .contact .php-email-form .loading:before{
   content:"";
@@ -563,7 +576,6 @@ section{padding:60px 0 20px;overflow:hidden;}
 .highlights{list-style:none;padding-left:0;}
 .highlights li{margin-bottom:10px;}
 
-/* Optional hover scale utility (keep if used elsewhere) */
 .hover-image-scale{display:inline-block;overflow:hidden;}
 .hover-image-scale img{display:block;transition:1s;}
 .hover-image-scale img:hover{transform:scale(1.2);}
@@ -577,7 +589,6 @@ section{padding:60px 0 20px;overflow:hidden;}
 /* ==========================================================
    IMAGE BLOCKS (Single + Projects)
    ========================================================== */
-/* Single image block (about/services image) */
 .single-image-block{
   position:relative;
   overflow:hidden;
@@ -592,90 +603,238 @@ section{padding:60px 0 20px;overflow:hidden;}
 }
 .single-image-block:hover img{transform:scale(1.08);}
 
-/* ABOUT */
-.about-image-block img{
+/* ===== FIXED HEIGHT ON DESKTOP (About/Why/Steel/BIM) ===== */
+.about-image-block{
+  height:350px;
   width:100%;
-  height:500px;
-  object-fit:cover;
-}
-
-/* WHY CHOOSE US */
-.why-choose-image-block img{
-  width:100%;
-  height:400px;
-  object-fit:cover;
-}
-
-/* STEEL DESIGN */
-.steel-design-image-block img{
-  width:100%;
-  height:600px;
-  object-fit:cover;
-}
-
-/* BIM */
-.bim-image-block img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-}
-
-/* STRUCTURAL ANALYSIS */
-.stucture-analysis-block{
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius);
-}
-
-.stucture-analysis-block img{
-  width: 100%;
-  height: 160px;        /* fixed height */
-  object-fit: cover;   /* no stretch */
-  transition: transform .4s ease;
-}
-
-.stucture-analysis-block:hover img{
-  transform: scale(1.08);
-}
-/* CONNECTION DESIGN */
-
-
-.single-image-block-connection{
-  position: relative;
-  overflow: hidden;
-  padding: 0px;
-  border-radius: var(--radius);
-}
-
-.single-image-block-connection img{
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  transition: transform .4s ease;
-}
-
-.single-image-block-connection:hover img{
-  transform: scale(1.08);
-}
-
-/* Project grid images (fixed height) */
-.project-item .project-image-block{
-  position:relative;
-  width:100%;
-  height:220px;
   overflow:hidden;
-  border-radius:var(--radius);
+  text-align:center;
 }
-.project-item .project-image-block img{
+.why-choose-image-block{
+  height:350px;
   width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .4s ease;
+  overflow:hidden;
+  text-align:center;
 }
-.project-item .project-image-block:hover img{transform:scale(1.08);}
+.steel-design-image-block{
+  height:525px;
+  width:100%;
+  overflow:hidden;
+  text-align:center;
+}
+.bim-image-block{
+  height:300px;
+  width:100%;
+  overflow:hidden;
+  text-align:center;
+}
+
+/* Desktop behavior: keep full image inside fixed box (no crop) */
+.steel-design-image-block img,
+.about-image-block img,
+.why-choose-image-block img,
+.bim-image-block img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  display:block;
+  margin:auto;
+}
+
+/* ===== STRUCTURAL / CONNECTION / PROJECT IMAGE GRIDS ===== */
+.structural-image-block,
+.connection-design-image-block,
+.project-image-block{
+  width:100%;
+  overflow:hidden;
+  text-align:center;
+}
+
+/* Desktop fixed heights (as you set) */
+.structural-image-block img{
+  height:160px;
+  width:100%;
+  object-fit:contain;
+}
+.connection-design-image-block img{
+  height:140px;
+  width:100%;
+  object-fit:contain;
+}
+.project-image-block img{
+  height:220px;
+  width:100%;
+  object-fit:contain;
+}
 
 /* ==========================================================
-   FOOTER (your new footer)
+   Pages: Design
+   ========================================================== */
+  .page-detailing-design-image-block{
+    height:350px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+  }
+  .page-advanced-technology-image-block{
+    height:300px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+  }
+  .page-steel-detailing-team-image-block{
+    height:300px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+  }
+  .page-quality-policy-image-block{
+    height:300px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+  }
+  .page-why-choose-us-image-block{
+    height:350px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+  }
+   .page-what-we-offer-image-block{
+    height:350px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+  }
+  .page-why-partner-image-block{
+    height:350px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+  }
+
+  .page-detailing-design-image-block img, .page-advanced-technology-image-block img, .page-steel-detailing-team-image-block img, .page-quality-policy-image-block img, .page-why-choose-us-image-block img, .page-what-we-offer-image-block img, .page-why-partner-image-block img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    display:block;
+    margin:auto;
+  }
+
+/* ==========================================================
+   MOBILE: height fixed NA THAKBE (your requirement)
+   ========================================================== */
+@media (max-width: 576px){
+
+  /* About/Why/Steel/BIM: remove fixed block height */
+  .about-image-block,
+  .why-choose-image-block,
+  .steel-design-image-block,
+  .bim-image-block{
+    height:auto !important;
+    overflow:visible;
+  }
+
+  /* Their images: natural responsive height */
+  .about-image-block img,
+  .why-choose-image-block img,
+  .steel-design-image-block img,
+  .bim-image-block img{
+    width:100%;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain;
+    margin:0 auto;
+  }
+
+  /* Structural/Connection/Project images: remove fixed heights */
+  .structural-image-block img,
+  .connection-design-image-block img,
+  .project-image-block img{
+    height:auto !important;
+    max-height:none !important;
+    width:100%;
+    object-fit:contain;
+  }
+
+  /* For Pages: Natural responsive height */
+  .page-detailing-design-image-block, .page-advanced-technology-image-block, .page-steel-detailing-team-image-block, .page-quality-policy-image-block, .page-why-choose-us-image-block, .page-what-we-offer-image-block, .page-why-partner-image-block{
+    height:auto !important;
+    overflow:visible;
+  }
+
+  .page-detailing-design-image-block img, .page-advanced-technology-image-block img, .page-steel-detailing-team-image-block img, .page-quality-policy-image-block img, .page-why-choose-us-image-block img, .page-what-we-offer-image-block img, .page-why-partner-image-block img{
+    width:100%;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain;
+    margin:0 auto;
+  }
+}
+
+/* ==========================================================
+   PROJECT PAGE IMAGE BOX (No crop + Responsive)
+   ========================================================== */
+
+.project-card p{
+  text-align: justify;
+}
+
+/* Desktop: fixed-height box */
+.project-image-box{
+  width: 100%;
+  height: 350px;              
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;          
+  justify-content: center;       
+}
+
+/* Image: full visible (NO CROP) */
+.project-image{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;           /* KEY: never crop */
+  display: block;
+}
+
+/* Optional hover zoom (still no crop since contain keeps full view) */
+.project-image-box:hover .project-image{
+  transform: scale(1.03);
+  transition: transform .4s ease;
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE
+   ========================================================== */
+@media (max-width: 576px){
+
+  /* On mobile: don't keep fixed height */
+  .project-image-box{
+    height: auto !important;
+    padding: 10px;               /* little breathing space */
+    overflow: visible;
+  }
+
+  .project-image{
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  /* Make table text comfortable */
+  .table th, .table td{
+    font-size: 13px;
+    vertical-align: top;
+  }
+}
+
+/* ==========================================================
+   FOOTER
    ========================================================== */
 #footer{background:var(--dark);color:#fff;font-size:14px;}
 #footer a.text-white:hover{color:#0d6efd;}

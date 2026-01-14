@@ -20,7 +20,8 @@ class WebsiteController extends Controller
 
     public function steelDetailing()
     {
-        return view('frontend.pages.steel-detailing');
+        $projects = Project::where('status', 'published')->latest()->get();
+        return view('frontend.pages.steel-detailing', compact('projects'));
     }
     public function rebarDetailing()
     {
@@ -33,11 +34,13 @@ class WebsiteController extends Controller
     }
     public function consulting()
     {
-        return view('frontend.pages.consulting');
+        $projects = Project::where('status', 'published')->latest()->get();
+        return view('frontend.pages.consulting', compact('projects'));
     }
     public function contact()
     {
-        return view('frontend.pages.contact');
+        $projects = Project::where('status', 'published')->latest()->get();
+        return view('frontend.pages.contact', compact('projects'));
     }
     public function contactSubmit(Request $request)
     {

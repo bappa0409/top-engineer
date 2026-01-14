@@ -14,7 +14,6 @@ class Project extends Model
         'dimensions',
         'building_height',
         'weight',
-        'number_of_parts',
         'purpose',
         'documentation',
     ];

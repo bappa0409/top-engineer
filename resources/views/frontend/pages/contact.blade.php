@@ -79,6 +79,35 @@
 </section>
 <!-- end::Contact Section -->
 
+<!-- begin::Portfolio Section -->
+<section id="portfolio" class="content mt-5 pt-5-mobile">
+    <div class="container-fluid">
+
+        <div class="section-title text-center mb-5">
+            <h2 class="mb-1 text-uppercase">Our Projects</h2>
+            <p>Successfully Completed Projects</p>
+        </div>
+
+        <div class="row">
+            @forelse($projects as $project)
+                <div class="col-lg-3 col-md-6 col-6 project-item mb-4">
+                    <div class="project-image-block img-thumbnail">
+                        <a href="{{ asset($project->image) }}" data-gallery="projectGallery"
+                            class="lightbox-image preview-link">
+
+                            <img src="{{ asset($project->image) }}" loading="lazy" class="img-fluid"
+                                alt="{{ $project->title }}">
+                        </a>
+                    </div>
+                </div>
+            @empty
+                <p class="text-center">No projects available at the moment.</p>
+            @endforelse
+        </div>
+
+    </div>
+</section>
+<!-- end::Portfolio Section -->
 
 @endsection
 

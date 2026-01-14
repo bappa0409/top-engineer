@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('dimensions')->nullable();
             $table->decimal('building_height', 8, 2)->nullable();
             $table->bigInteger('weight')->nullable();
-            $table->integer('number_of_parts')->nullable();
             $table->string('purpose')->nullable();
             $table->string('documentation')->nullable();
             $table->enum('status', ['draft', 'published'])->default('draft');
